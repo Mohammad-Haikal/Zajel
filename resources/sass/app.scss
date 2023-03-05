@@ -9,6 +9,21 @@
 
 @import '~bootstrap-icons';
 
+
+.active{
+    color: #22AFC4 !important;
+    background-color: transparent !important;
+
+    &:hover {
+        color: #35A1B0 !important;
+    }
+}
+
+.dropdown-item:focus{
+    background-color: #35A1B0 !important;
+
+}
+
 .bg-custom-primary {
     background-color: #22AFC4;
 }

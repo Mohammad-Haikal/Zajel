@@ -21,7 +21,15 @@
                     @enderror
                 </div>
             </div>
-
+            <div class="mb-2 pb-2">
+                <div class="form-outline">
+                    <label class="form-label">Phone Number</label>
+                    <input class="form-control form-control" name="phone" type="tel" value="{{ old('phone') }}" placeholder="Enter Phone Number" required />
+                    @error('phone')
+                        <small class="text-danger">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
             <div class="col-md-6 mb-2 pb-2">
                 <div class="form-outline">
                     <label class="form-label">Password</label>

@@ -11,9 +11,18 @@ class OrderController extends Controller
 {
     public function index()
     {
-        return view('order.index', [
+        return view('profile.order', [
             'orders' => Auth::user()->orders
         ]);
+    }
+
+    public function finish(Order $order)
+    {
+        $order->update([
+            'state' => 'Finished'
+        ]);
+
+        return back()->with('message', 'Order finished successfully');
     }
 
     public function destroy(Shipment $shipment, Order $order)
@@ -23,6 +32,7 @@ class OrderController extends Controller
         ]);
 
         $order->delete();
-        return redirect('/order')->with('message', 'Order deleted successfully');
+
+        return back()->with('message', 'Order deleted successfully');
     }
 }

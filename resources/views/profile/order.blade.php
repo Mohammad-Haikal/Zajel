@@ -9,7 +9,7 @@
                         <tr>
                             <th scope="col">Product / Material</th>
                             <th scope="col">Price (per 1 kg)</th>
-                            <th scope="col" colspan="2">State</th>
+                            <th scope="col" colspan="2">Status</th>
                         </tr>
                     </thead>
                     <tbody>

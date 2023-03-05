@@ -5,9 +5,3 @@
         </small>
     </div>
 @endif
-
-<script>
-    $(function() {
-        $('#flash-message').fadeIn(500).delay(2000).fadeOut(500);
-    });
-</script>

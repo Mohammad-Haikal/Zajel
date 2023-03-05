@@ -27,7 +27,7 @@ class RouterController extends Controller
 
     public function store()
     {
-        return view('store', [
+        return view('profile.store', [
             'shipments' => Shipment::all()->where('is_ordered', '=', 0)->sortBy('created_at')
         ]);
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RouterController;
 use App\Http\Controllers\ShipmentController;
@@ -62,8 +63,17 @@ Route::prefix('/order')->group(function () {
     // Route::post('/store', [ShipmentController::class, 'store'])->middleware('auth');
     // Route::get('/edit/{shipment}', [ShipmentController::class, 'show'])->middleware('auth');
     // Route::put('/update/{shipment}', [ShipmentController::class, 'update'])->middleware('auth');
+    Route::put('/finish/{order}', [OrderController::class, 'finish'])->middleware('admin');
     Route::delete('/delete/{shipment}/{order}', [OrderController::class, 'destroy'])->middleware('auth');
     // Route::get('/view/{shipment}', [ShipmentController::class, 'view'])->middleware('auth');
     // Route::post('/order/{shipment}', [ShipmentController::class, 'order'])->middleware('auth');
 });
 
+
+// Admin Dashboard
+Route::prefix('/dashboard')->group(function () {
+    // Route::get('/', [DashboardController::class, 'index'])->name('dashboard')->middleware('admin');
+    Route::get('/requests', [DashboardController::class, 'requests'])->middleware('admin');
+    Route::get('/orders', [DashboardController::class, 'orders'])->middleware('admin');
+    // Route::get('/users', [DashboardController::class, 'users'])->middleware('admin');
+});

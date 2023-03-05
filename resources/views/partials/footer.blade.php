@@ -7,7 +7,7 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
-                    <h6 class="text-uppercase fw-bold border-start border-5 ps-3 mb-4 p-2" style="border-color: #22AFC4 !important">
+                    <h6 class=" fw-bold border-start border-5 ps-3 mb-4 p-2" style="border-color: #22AFC4 !important">
                         About Us
                     </h6>
                     <p class="text-muted">
@@ -16,13 +16,13 @@
                     </p>
                     <section class="mb-4">
                         <!-- Facebook -->
-                        <a class="btn btn-floating rounded-circle m-1 text-white" href="#!" role="button" style="background-color: #3b5998;"><i class="bi bi-facebook"></i></a>
+                        <a class="btn btn-outline-light rounded-circle border border-1 m-1 " href="#!" role="button" ><i class="bi bi-facebook"></i></a>
                         <!-- Twitter -->
-                        <a class="btn btn-floating rounded-circle m-1 text-white" href="#!" role="button" style="background-color: #55acee;"><i class="bi bi-twitter"></i></a>
+                        <a class="btn btn-outline-light rounded-circle border border-1 m-1 " href="#!" role="button" ><i class="bi bi-twitter"></i></a>
                         <!-- Google -->
-                        <a class="btn btn-floating rounded-circle m-1 text-white" href="#!" role="button" style="background-color: #dd4b39;"><i class="bi bi-google"></i></a>
+                        <a class="btn btn-outline-light rounded-circle border border-1 m-1 " href="#!" role="button" ><i class="bi bi-google"></i></a>
                         <!-- Behance -->
-                        <a class="btn btn-floating rounded-circle m-1 text-white" href="#!" role="button" style="background-color: #0053F2;"><i class="bi bi-behance"></i></a>
+                        <a class="btn btn-outline-light rounded-circle border border-1 m-1 " href="#!" role="button" ><i class="bi bi-behance"></i></a>
                         {{-- <!-- Linkedin -->
                         <a class="btn btn-floating m-1 text-white rounded-circle" href="#!" role="button" style="background-color: #0082ca;"><i class="bi bi-linkedin"></i></a>
                         <!-- Github -->
@@ -34,7 +34,7 @@
                 <!-- Grid column -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold border-start border-5 ps-3 mb-4 p-2" style="border-color: #22AFC4 !important">
+                    <h6 class=" fw-bold border-start border-5 ps-3 mb-4 p-2" style="border-color: #22AFC4 !important">
                         Head Office
                     </h6>
                     <p>
@@ -55,7 +55,7 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold border-start border-5 ps-3 mb-4 p-2" style="border-color: #22AFC4 !important">
+                    <h6 class=" fw-bold border-start border-5 ps-3 mb-4 p-2" style="border-color: #22AFC4 !important">
                         Useful links
                     </h6>
                     <p class="mb-1">
@@ -82,7 +82,7 @@
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mb-md-0 mx-auto mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold border-start border-5 ps-3 mb-4 p-2" style="border-color: #22AFC4 !important">Locations</h6>
+                    <h6 class=" fw-bold border-start border-5 ps-3 mb-4 p-2" style="border-color: #22AFC4 !important">Locations</h6>
                     <img class="img-fluid" src="{{ asset('images/map/location-map.png') }}" alt="">
                 </div>
                 <!-- Grid column -->

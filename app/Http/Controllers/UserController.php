@@ -18,6 +18,11 @@ class UserController extends Controller
 
         if (Auth::attempt($formFields, true)) {
             $request->session()->regenerate();
+
+            if (Auth::user()->role == 1) {
+                return redirect('/dashboard/requests')->with('message', 'You have successfully logged in as Administrator');
+            }
+
             return redirect('/')->with('message', 'You have successfully logged in');
         }
 
@@ -29,6 +34,7 @@ class UserController extends Controller
         $formFields = $request->validate([
             'name' => ['required', 'min:3'],
             'email' => ['required', Rule::unique('user', 'email')],
+            'phone' => ['required'],
             'password' => ['required', 'confirmed', 'min:6']
         ]);
 

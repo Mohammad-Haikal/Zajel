@@ -18823,6 +18823,18 @@ textarea.form-control-lg {
   content: "\f8cc";
 }
 
+.active {
+  color: #22AFC4 !important;
+  background-color: transparent !important;
+}
+.active:hover {
+  color: #35A1B0 !important;
+}
+
+.dropdown-item:focus {
+  background-color: #35A1B0 !important;
+}
+
 .bg-custom-primary {
   background-color: #22AFC4;
 }

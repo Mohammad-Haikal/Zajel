@@ -13,8 +13,8 @@
                             <th scope="col">Product / Material</th>
                             <th scope="col">Weight (Kg)</th>
                             {{-- <th scope="col">Size (m2)</th> --}}
-                            <th scope="col" colspan="3">Price (per 1 kg)</th>
-                            {{-- <th scope="col" colspan="3">Status</th> --}}
+                            <th scope="col">Price (per 1 kg)</th>
+                            <th scope="col" colspan="3">Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -27,7 +27,7 @@
                                 <td style="vertical-align: middle;">{{ $shipment->weight }}</td>
                                 {{-- <td style="vertical-align: middle;">{{ $shipment->size }}</td> --}}
                                 <td style="vertical-align: middle;">{{ $shipment->price }}</td>
-                                {{-- <td style="vertical-align: middle;">{{ ($shipment->status == 0) ? 'Pending' : 'In Progress' }}</td> --}}
+                                <td style="vertical-align: middle;">{{ ($shipment->is_ordered == 1) ? 'Ordered (under proccessing)' : 'In store' }}</td>
                                 <td style="vertical-align: middle;" scope="row">
                                     <a class="link-secondary" href="/shipment/edit/{{ $shipment->id }}">Edit</a>
                                 </td>
