@@ -12,7 +12,7 @@
                     <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="#">About</a>
+                    <a class="nav-link {{ request()->is('about') ? 'active' : '' }} disabled" href="#">About</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -21,8 +21,10 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item {{ request()->is('shipment') ? 'active' : '' }}" href="/shipment">My Shipments</a></li>
-                        <li><a class="dropdown-item {{ request()->is('request') ? 'active' : '' }}" href="#">Shipment Requests</a></li>
-                        <li><a class="dropdown-item {{ request()->is('order') ? 'active' : '' }}" href="/order">Shipment Orders</a></li>
+                        <li><a class="dropdown-item {{ request()->is('order') ? 'active' : '' }}" href="/order">My Orders</a></li>
+                        <li><a class="dropdown-item {{ request()->is('sea') ? 'active' : '' }}" href="/sea">My Sea Shipments</a></li>
+                        <li><a class="dropdown-item {{ request()->is('air') ? 'active' : '' }}" href="/air">My Air Shipments</a></li>
+                        <li><a class="dropdown-item {{ request()->is('ground') ? 'active' : '' }} disabled" href="/ground">My Ground Shipments</a></li>
                     </ul>
                 </li>
 
@@ -32,11 +34,13 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item {{ request()->is('store') ? 'active' : '' }}" href="/store">Browse Shipments</a></li>
-                        <li><a class="dropdown-item {{-- {{ request()->is('request') ? 'active' : '' }} --}}" href="#">Request New Shipment</a></li>
+                        <li><a class="dropdown-item {{ request()->is('sea/add') ? 'active' : '' }}" href="/sea/add">Request Sea Shipment</a></li>
+                        <li><a class="dropdown-item {{ request()->is('air/add') ? 'active' : '' }}" href="/air/add">Request Air Shipment</a></li>
+                        <li><a class="dropdown-item {{ request()->is('ground/add') ? 'active' : '' }} disabled" href="/ground/add">Request Ground Shipment</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link disabled" href="#">Contact Us</a>
                 </li>
                 @auth
                     <li class="nav-item dropdown">
@@ -46,7 +50,7 @@
                         <ul class="dropdown-menu">
                             @if (Auth::user()->role == 1)
                                 <li>
-                                    <a class="dropdown-item {{ request()->is('dashboard/requests') ? 'active' : '' }}" href="/dashboard/requests">Dashboard</a>
+                                    <a class="dropdown-item {{ request()->is('dashboard/requests') ? 'active' : '' }}" href="/dashboard/requests/sea">Dashboard</a>
                                 </li>
                             @endif
                             <li>

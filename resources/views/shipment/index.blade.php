@@ -27,17 +27,21 @@
                                 <td style="vertical-align: middle;">{{ $shipment->weight }}</td>
                                 {{-- <td style="vertical-align: middle;">{{ $shipment->size }}</td> --}}
                                 <td style="vertical-align: middle;">{{ $shipment->price }}</td>
-                                <td style="vertical-align: middle;">{{ ($shipment->is_ordered == 1) ? 'Ordered (under proccessing)' : 'In store' }}</td>
-                                <td style="vertical-align: middle;" scope="row">
-                                    <a class="link-secondary" href="/shipment/edit/{{ $shipment->id }}">Edit</a>
-                                </td>
-                                <td style="vertical-align: middle;" scope="row">
-                                    <form action="/shipment/delete/{{ $shipment->id }}" method="post">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button class="btn btn-sm link-danger border-0" type="submit" onclick="return confirm('Are you sure?')">Delete</button>
-                                    </form>
-                                </td>
+                                @if ($shipment->is_ordered == 0)
+                                    <td style="vertical-align: middle;">In store</td>
+                                    <td style="vertical-align: middle;" scope="row">
+                                        <a class="link-secondary" href="/shipment/edit/{{ $shipment->id }}">Edit</a>
+                                    </td>
+                                    <td style="vertical-align: middle;" scope="row">
+                                        <form action="/shipment/delete/{{ $shipment->id }}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-sm link-danger border-0" type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+                                        </form>
+                                    </td>
+                                @elseif ($shipment->is_ordered == 1)
+                                    <td style="vertical-align: middle;" colspan="3">Ordered (under proccessing)</td>
+                                @endif
                             </tr>
                         @endforeach
                     </tbody>

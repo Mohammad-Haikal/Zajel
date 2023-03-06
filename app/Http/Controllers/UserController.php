@@ -20,7 +20,7 @@ class UserController extends Controller
             $request->session()->regenerate();
 
             if (Auth::user()->role == 1) {
-                return redirect('/dashboard/requests')->with('message', 'You have successfully logged in as Administrator');
+                return redirect('/dashboard/requests/sea')->with('message', 'You have successfully logged in as Administrator');
             }
 
             return redirect('/')->with('message', 'You have successfully logged in');

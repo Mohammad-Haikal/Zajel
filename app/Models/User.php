@@ -56,4 +56,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Order::class, 'user_id');
     }
+
+    public function seaRequests()
+    {
+        return $this->hasMany(SeaRequest::class, 'user_id');
+    }
+
+    public function airRequests()
+    {
+        return $this->hasMany(AirRequest::class, 'user_id');
+    }
+
+    public function groundRequests()
+    {
+        return $this->hasMany(GroundRequest::class, 'user_id');
+    }
 }
