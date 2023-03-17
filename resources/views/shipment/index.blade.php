@@ -40,7 +40,7 @@
                                         </form>
                                     </td>
                                 @elseif ($shipment->is_ordered == 1)
-                                    <td style="vertical-align: middle;" colspan="3">Ordered (under proccessing)</td>
+                                    <td style="vertical-align: middle;" colspan="3">Ordered - ({{ $shipment->order->state }})</td>
                                 @endif
                             </tr>
                         @endforeach
